@@ -1,21 +1,23 @@
 # Processing-the-TBCOV-Dataset
 
 
-Introduction:
+Table of Contents:
+About the Project:
 
+The goal of this project was to leverage the geolocated tweet dataset TBCOV into information about the relationship between COVID-19 tweet sentiment and the prevalence of the COVID-19 virus in a community.   
 
-Steps:
+Datasets:
 
+Getting Started:
 
+Starting point is a Tab Separated Values (TSV) file from the original geolocated tweet data set provided by (Imran et al., 2022). This file contains TweetID numbers, and the geolocation information created as part of Imran et al’s research. 
 
-Starting point is the Tab Seperated Values (TSV) file from the original geolocated tweet data set provided by Quazi et al Need Cite ****
+Additionally, users will need to have a twitter account and sign up for a developer access to use the twitter API for tweet hydration.
 
-Additionally users will need to have a twitter account and sign up for a developer access in order to use the twiiter api for tweet hydration
+The original TSV does not come with tweet contents like text or links as this would violate Twitter’s terms of service. To get tweet contents we will use the TweetID numbers to request the contents from the Twitter API using the Hydrator app. 
 
+The Hydrator app only takes a text file with each requested TweetID on a new line. To make this TweetID text file we will use tweetidextractor2.py . This python script removes all retweets by checking for the existence of a RetweetID because for this research we are only interested in original tweets.
 
-The TSV comes with tweetid numbers and some associated metadata but no tweet text as this would violate Twiiter's terms of service. Before tweet hydration begins we will remove anything with a RetweetID because for this research we are only interested in original tweets. 
-
-The remove retweets PYTHON ****** file will return a text file with a new tweetid on each row. This tweet id file will then be fed into the Hydrator app ****** github hyper link here ******* and the hydrator app will return the raw tweet data as a json Lines (.jsonl) file. 
 
 Sentiment calculaton ******* python senti file ****** calculates the sentiment using Textblob Vader Sentimetn and AFINN and appends the values to the end of each json line. 
 
