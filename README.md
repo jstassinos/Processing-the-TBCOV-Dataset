@@ -2,16 +2,16 @@
 
 
 
-Table of Contents:
-About the Project:
+### Table of Contents:
+### About the Project:
 
 The goal of this project was to leverage the geolocated tweet dataset TBCOV into information about the relationship between COVID-19 tweet sentiment and the prevalence of the COVID-19 virus in a community.   
 
-Datasets:
+### Datasets:
 
-Getting Started:
+### Getting Started:
 
-See [requirements.txt](main/Processing-the-TBCOV-Dataset/requirements.txt) for the libararies used in this repository. 
+See [requirements.txt](/Processing-the-TBCOV-Dataset/requirements.txt) for the libararies used in this repository. 
 
 Starting point is a Tab Separated Values (TSV) file from the original geolocated tweet data set provided by (Imran et al., 2022). This file contains TweetID numbers, and the geolocation information created as part of Imran et al’s research. 
 
