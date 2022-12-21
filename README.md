@@ -16,7 +16,7 @@ Additionally, users will need to have a twitter account and sign up for a develo
 
 The original TSV does not come with tweet contents like text or links as this would violate Twitter’s terms of service. To get tweet contents we will use the TweetID numbers to request the contents from the Twitter API using the Hydrator app. 
 
-The Hydrator app only takes a text file with each requested TweetID on a new line. To make this TweetID text file we will use tweetidextractor2.py . This python script removes all retweets by checking for the existence of a RetweetID because for this research we are only interested in original tweets.
+The Hydrator app only takes a text file with each requested TweetID on a new line. To make this TweetID text file we will use [tweetidextractor2.py]: https://github.com/jstassinos/Processing-the-TBCOV-Dataset/blob/main/tweetidExtractor2.py  . This python script removes all retweets by checking for the existence of a RetweetID because for this research we are only interested in original tweets.
 
 
 Sentiment calculaton ******* python senti file ****** calculates the sentiment using Textblob Vader Sentimetn and AFINN and appends the values to the end of each json line. 
