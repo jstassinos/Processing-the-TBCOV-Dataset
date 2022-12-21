@@ -1,6 +1,7 @@
 # Processing-the-TBCOV-Dataset
 
 
+
 Table of Contents:
 About the Project:
 
@@ -10,16 +11,18 @@ Datasets:
 
 Getting Started:
 
+See [requirements.txt](main/Processing-the-TBCOV-Dataset/requirements.txt) for the libararies used in this repository. 
+
 Starting point is a Tab Separated Values (TSV) file from the original geolocated tweet data set provided by (Imran et al., 2022). This file contains TweetID numbers, and the geolocation information created as part of Imran et al’s research. 
 
 Additionally, users will need to have a twitter account and sign up for a developer access to use the twitter API for tweet hydration.
 
 The original TSV does not come with tweet contents like text or links as this would violate Twitter’s terms of service. To get tweet contents we will use the TweetID numbers to request the contents from the Twitter API using the Hydrator app. 
 
-The Hydrator app only takes a text file with each requested TweetID on a new line. To make this TweetID text file we will use [tweetidextractor2.py] (Processing-the-TBCOV-Dataset/tweetidextractor2.py)  . This python script removes all retweets by checking for the existence of a RetweetID because for this research we are only interested in original tweets.
+The [Hydrator](https://github.com/DocNow/hydrator) app only takes a text file with each requested TweetID on a new line. To make this TweetID text file we will use [tweetidextractor2.py](main/Processing-the-TBCOV-Dataset/tweetidextractor2.py)  . This python script removes all retweets by checking for the existence of a RetweetID because for this research we are only interested in original tweets.
 
 
-Sentiment calculaton ******* python senti file ****** calculates the sentiment using Textblob Vader Sentimetn and AFINN and appends the values to the end of each json line. 
+Sentiment calculaton [runner.py](main/Processing-the-TBCOV-Dataset/runner.py) calculates the sentiment using Textblob Vader Sentimetn and AFINN and appends the values to the end of each json line. 
 
 In order to import this data to a SQL server ( I used Postgresql) the jsonlines format will need to be converted to a CSV using **** PYTON TO CSV ****
 
