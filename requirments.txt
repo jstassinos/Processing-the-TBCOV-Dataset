@@ -1,0 +1,13 @@
+pandas
+csv
+jsonlines
+os
+math
+pprint
+sys
+afinn
+vaderSentiment
+textblob
+numpy
+
+
