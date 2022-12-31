@@ -1,9 +1,14 @@
 # Processing-the-TBCOV-Dataset
 
 ### Table of Contents:
+- [Citation](https://github.com/jstassinos/Processing-the-TBCOV-Dataset/edit/main/README.md#Citation)
 - [About the Project](https://github.com/jstassinos/Processing-the-TBCOV-Dataset/edit/main/README.md#about-the-project)
 - [Dataset](https://github.com/jstassinos/Processing-the-TBCOV-Dataset/edit/main/README.md#dataset)
 - [Getting Started](https://github.com/jstassinos/Processing-the-TBCOV-Dataset/edit/main/README.md#getting-started)
+- [Acknowledgements](https://github.com/jstassinos/Processing-the-TBCOV-Dataset/edit/main/README.md#acknowledgements)
+
+### Citation:
+(Coming Soon)
 
 ### About the Project:
 
@@ -30,3 +35,6 @@ The original tsv of the tweet ids has multiple sources for locations, and [tweet
 
 The two datasets one containing sentiment information and the other containing geolocation information were both uploaded into a PostGreSQL server and are joined together using the tweetid as the join key. The tweets can then be aggregated togher by day and county producing the tables that will be used for the analysis. 
 
+### Acknowledgements:
+
+Thank you Dr. Anderson and Dr. Zufle for offering endless hours of your time and filling those hours with valuable insight and guidance.  You have my deepest apreciation for getting me here. 
