@@ -1,11 +1,13 @@
 # Processing-the-TBCOV-Dataset
 
 ### Table of Contents:
-
+- [About the Project](https://github.com/jstassinos/Processing-the-TBCOV-Dataset/edit/main/README.md#about-the-project)
+- [Dataset](https://github.com/jstassinos/Processing-the-TBCOV-Dataset/edit/main/README.md#dataset)
+- [Getting Started](https://github.com/jstassinos/Processing-the-TBCOV-Dataset/edit/main/README.md#getting-started)
 
 ### About the Project:
 
-The goal of this project was to leverage the geolocated tweet dataset TBCOV into information about the relationship between COVID-19 tweet sentiment and the prevalence of the COVID-19 virus in a community.   
+The goal of this project was to leverage the geolocated tweet dataset TBCOV into information about the relationship between COVID-19 tweet sentiment and the prevalence of the COVID-19 virus in a community. Researchers using Sentiment data have found relationships between  
 
 ### Dataset:
 The original TSV file with the TBCOV data for the United States of America can be found [HERE](https://crisisnlp.qcri.org/tbcov). See the Country Release download section. 
@@ -26,6 +28,5 @@ In order to import this data to a SQL server ( I used Postgresql) the jsonlines 
 
 The original tsv of the tweet ids has multiple sources for locations, and [tweetidandgeolocextractor.py](/tweetidandgeolocextractor.py) take the most accurate one and sets it as the location for that tweet and returns it in a table format with the tweetID as the key for joining to the sentiment table. 
 
-The two datasets one containing sentiment information and the other containing geolocation information were both uploaded into a PostGreSQL server and SQL queries 
-
+The two datasets one containing sentiment information and the other containing geolocation information were both uploaded into a PostGreSQL server and are joined together using the tweetid as the join key. The tweets can then be aggregated togher by day and county producing the tables that will be used for the analysis. 
 
